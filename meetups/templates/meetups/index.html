@@ -1,5 +1,5 @@
-{% comment %} block requires extends from base.html to work {% endcomment %}
 {% extends 'meetups/base.html' %}
+{% comment %} block requires extends from base.html to work {% endcomment %}
 
 {% load static %}
 
@@ -20,7 +20,7 @@
     <h2>Upcoming Meetups</h2>
     <ol>
       {% for meetup in meetups %}
-        {% include 'meetups/includes/meetup-item.html' with title=meetup.title location=meetup.location slug=meetup.slug %}
+        {% include 'meetups/includes/meetup-item.html' with title=meetup.title location='New York' image=meetup.image.url slug=meetup.slug %}
       {% endfor %}
     </ol>
   </section>
